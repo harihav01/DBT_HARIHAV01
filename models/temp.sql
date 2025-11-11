@@ -1,4 +1,4 @@
-with source_data as
-( select 1 as id)
+{{ config(materialized='view') }}
 
-SELECT * FROM source_data
+
+SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CUSTOMER
